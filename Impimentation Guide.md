@@ -38,8 +38,11 @@
 ---
 
 ## 3. Architecture Overview
-- **Diagram:** Include a visual representation showing VPC, EC2, EFS, ALB, Auto Scaling, and Route 53.  
-- **Description:** High-level architecture with multiple Availability Zones for high availability, auto-scaling for traffic, and secure networking.  
+### Diagram
+![Architecture Diagram](images/architecture.png)
+
+### Description
+High-level architecture with multiple Availability Zones for high availability, auto-scaling for traffic, and secure networking.  
 
 ---
 
@@ -74,6 +77,8 @@
 ---
 
 ### 4.2 Elastic Compute Cloud (EC2)
+![EC2 Setup](images/ec2.png)
+
 - Launch EC2 instances in private/public subnets.  
 - Configure Auto Scaling groups with policies (CPU/request-based).  
 - Use AMIs with required dependencies.  
@@ -81,12 +86,16 @@
 ---
 
 ### 4.3 Elastic File System (EFS)
+![EFS Setup](images/efs.png)
+
 - Create EFS and mount targets in all required subnets.  
 - Configure security groups for EC2 access.  
 
 ---
 
 ### 4.4 Application Load Balancer (ALB)
+![ALB Setup](images/alb.png)
+
 - Create ALB in public subnets.  
 - Configure listeners and target groups pointing to EC2 instances.  
 - Enable health checks.  
@@ -94,18 +103,24 @@
 ---
 
 ### 4.5 Route 53
+![Route 53 Setup](images/route53.png)
+
 - Create hosted zone and add DNS records to ALB.  
 - Configure health checks and routing policies.  
 
 ---
 
 ## 5. Application Deployment
+![Application Deployment](images/deployment.png)
+
 - Deploy code to EC2 (SSH, CodeDeploy, or CI/CD).  
 - Use environment variables or config management for settings.  
 
 ---
 
 ## 6. Security Configuration
+![Security Setup](images/security.png)
+
 - **Security Groups:** Control inbound/outbound traffic.  
 - **IAM Policies:** Assign least-privilege permissions.  
 - **Encryption:** EFS encryption at rest, TLS for in-transit.  
@@ -113,12 +128,16 @@
 ---
 
 ## 7. Monitoring and Logging
+![Monitoring](images/monitoring.png)
+
 - **CloudWatch:** Setup metrics, alarms, dashboards.  
 - **Logging:** Application/system logs → CloudWatch or S3.  
 
 ---
 
 ## 8. Backup and Disaster Recovery
+![Backup & DR](images/backup.png)
+
 - Regular EFS/database backups to S3.  
 - Cross-AZ or cross-region replication if required.  
 - Document recovery steps.  
@@ -126,6 +145,8 @@
 ---
 
 ## 9. Troubleshooting
+![Troubleshooting](images/troubleshooting.png)
+
 - Common issues: connectivity, scaling failures, deployment errors.  
 - Use CloudWatch, CloudTrail, VPC Flow Logs to debug.  
 
