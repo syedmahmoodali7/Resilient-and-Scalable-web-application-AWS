@@ -39,7 +39,7 @@
 
 ## 3. Architecture Overview
 ### Diagram
-![Architecture Diagram](images/architecture.png)
+![Architecture Diagram](/architecture.png)
 
 ### Description
 High-level architecture with multiple Availability Zones for high availability, auto-scaling for traffic, and secure networking.  
