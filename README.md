@@ -3,6 +3,8 @@
 ## Project Description
 This project aims to design and implement a highly available and scalable infrastructure for a web application on AWS. The architecture will leverage AWS services to ensure the web application can efficiently handle varying loads and maintain high availability across multiple Availability Zones.
 
+![Architecture Diagram](/architecture.png)
+
 ## Objectives
 - **High Availability:** Achieve minimal downtime by utilizing multiple Availability Zones.
 - **Scalability:** Use AWS Auto Scaling to adjust resources automatically in response to traffic changes.
